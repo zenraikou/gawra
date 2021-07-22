@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Data;
+using Data.Data.Repository;
+using Data.Repository;
+using gawra.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -61,6 +64,11 @@ namespace gawra
                 });
             
             services.AddAuthorization();
+            
+            // Setup DI.
+            services.AddScoped(typeof(IAsyncRepository<,>), typeof(EfRepository<,>));
+            services.AddScoped<IUserService, UserService>();
+            
             
             services.AddControllersWithViews();
         }
