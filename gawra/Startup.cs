@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Data;
 using Data.Data.Repository;
 using Data.Repository;
+using gawra.Configuration;
 using gawra.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -41,6 +42,8 @@ namespace gawra
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             
+            services.Configure<JwtConfig>(Configuration.GetSection("JWT"));
+            
             // Adding Authentication
             services.AddAuthentication(options =>
                 {
@@ -67,8 +70,7 @@ namespace gawra
             
             // Setup DI.
             services.AddScoped(typeof(IAsyncRepository<,>), typeof(EfRepository<,>));
-            services.AddScoped<IUserService, UserService>();
-            
+            services.AddScoped<IAuthService, AuthService>();
             
             services.AddControllersWithViews();
         }
