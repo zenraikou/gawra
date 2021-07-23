@@ -94,6 +94,17 @@ namespace gawra
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "ClientApp";
+
+                if (env.IsDevelopment())
+                {
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:3000");
+                }
+            });
         }
     }
 }
