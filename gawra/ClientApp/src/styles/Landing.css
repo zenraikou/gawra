@@ -1,0 +1,27 @@
+.landing-container {
+  width: 50%;
+}
+
+.container-left {
+  float: left;
+}
+
+.container-right {
+  float: right;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.login-box-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
