@@ -1,27 +1,78 @@
-.landing-container {
-  width: 50%;
+.landing-content {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  background: #1c4467;
+  height: 100vh;
 }
 
-.container-left {
-  float: left;
-}
-
-.container-right {
-  float: right;
-}
-
-.full-width {
-  width: 100%;
-}
-
-.login-box-container {
-  margin-right: auto;
+#gawra-img {
   margin-left: auto;
+  margin-right: 12px;
+  height: 380px;
 }
 
-.vertical-center {
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+.login-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+
+  background: #34739e;
+  color: #fffbfa;
+  border: 1px solid #2d5c91;
+  border-radius: 2px;
+  margin-left: 24px;
+  width: 350px;
+  height: 380px;
+}
+
+.login-form #gawra {
+  margin: auto;
+}
+
+.login-form .credentials {
+  display: grid;
+  justify-content: center;
+}
+
+.login-form .credentials #username, .login-form .credentials #password {
+  margin: 0 auto;
+  width: 300px;
+  padding: 0 3px;
+  height: 36px;
+  position: relative;
+  outline: none;
+  background: #1c4467;
+  border: 1px solid #2d5c91;
+  border-radius: 2px solid #2d5c91;
+  color: #fcfafb;
+}
+
+.login-form .credentials #username {
+  margin-top: auto;
+  margin-bottom: 3px;
+}
+
+.login-form .credentials #password {
+  margin-bottom: auto;
+  margin-top: 3px;
+}
+
+::placeholder {
+  color: #c4c1d4;
+}
+
+.login-form .credentials #username:focus, .login-form .credentials #password:focus {
+  border: 1px solid #fcfafb;
+  color: #fcfafb;
+}
+
+.login-form #login {
+  margin: auto 24px;
+  color: #fcfafb;
+  height: 42px;
+  background: #22222a;
+  border: 1px solid #2d5c91;
+  border-radius: 2px;
 }

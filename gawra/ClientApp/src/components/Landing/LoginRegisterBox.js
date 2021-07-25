@@ -7,10 +7,13 @@ export default class LoginRegisterBox extends Component {
 
   render() {
     return (
-      <div className="login-box-container vertical-center">
-        <input id="username" placeholder="Username" className="full-width" />
-        <input id="password" placeholder="Password" className="full-width" />
-        <button onClick={this.handleLogin}>Login</button>
+      <div className="login-form">
+        <h1 id="gawra">Gawra</h1>
+        <div className="credentials">{/*className="credentials"> */}
+          <input id="username" placeholder="Username" />
+          <input type="password" id="password" placeholder="Password" />
+        </div>
+        <button id="login" onClick={this.handleLogin}>Login</button>
       </div>
     );
   }

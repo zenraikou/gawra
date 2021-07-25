@@ -13,7 +13,7 @@ export default class App extends Component {
     return (
       <>
         <Provider postStore={PostStore} authStore={AuthStore}>
-          <Route exact path="/" component={Landing} />
+          <Route exact path="/Landing" component={Landing} />
         </Provider>
       </>
     );
