@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Data;
-using Data.Data.Repository;
 using Data.Repository;
 using gawra.Configuration;
 using gawra.Services;

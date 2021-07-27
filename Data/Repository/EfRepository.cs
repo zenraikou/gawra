@@ -7,7 +7,7 @@ using Data.Entities;
 using Data.Repository;
 using Microsoft.EntityFrameworkCore;
 
-namespace Data.Data.Repository
+namespace Data.Repository
 {
     public class EfRepository<T, TKey> : IAsyncRepository<T, TKey> where T : BaseEntity
     {
